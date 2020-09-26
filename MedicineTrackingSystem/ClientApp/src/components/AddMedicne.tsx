@@ -55,7 +55,7 @@ export class AddMedicine extends React.Component<RouteComponentProps<{}>, AddFet
         event.preventDefault();
         const data = new FormData(event.target);
 
-        var isValid = (Math.ceil(Math.abs(new Date(data.get("expiryDate")) - new Date()) / (24 * 60 * 60 * 1000)) < 15);
+        var isValid = (Math.ceil(Math.abs(new Date(data.get("expiryDate")).getTime() - new Date().getTime()) / (24 * 60 * 60 * 1000)) < 15);
 
         {
             isValid ?
