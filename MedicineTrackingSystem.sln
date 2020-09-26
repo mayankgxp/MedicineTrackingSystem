@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicineTrackingSystem", "MedicineTrackingSystem\MedicineTrackingSystem.csproj", "{B936FEA2-821B-41B8-B2A4-AB8C03B14190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineTrackingSystem.API", "MedicineTrackingSystem.API\MedicineTrackingSystem.API.csproj", "{096B2847-EF9A-4193-8255-764025C8B577}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B936FEA2-821B-41B8-B2A4-AB8C03B14190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B936FEA2-821B-41B8-B2A4-AB8C03B14190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B936FEA2-821B-41B8-B2A4-AB8C03B14190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B936FEA2-821B-41B8-B2A4-AB8C03B14190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096B2847-EF9A-4193-8255-764025C8B577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096B2847-EF9A-4193-8255-764025C8B577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096B2847-EF9A-4193-8255-764025C8B577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096B2847-EF9A-4193-8255-764025C8B577}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {979AF029-9D78-4363-ABAC-1AA02EB58238}
+	EndGlobalSection
+EndGlobal
