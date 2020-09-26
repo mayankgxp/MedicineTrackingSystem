@@ -55,13 +55,18 @@ export class FetchMedicine extends React.Component<RouteComponentProps<{}>, Fetc
                 </tr>
             </thead>
             <tbody>
-                {this.state.medicineList.length == 0 ? <div>No Records Found</div> : (medicineList.map(emp =>
-                    <tr key={emp.medicineId} style={emp.quantity < 10 ? { background: "yellow" } : (Math.ceil(Math.abs(emp.expiryDate.getTime() - new Date().getTime()) / (24 * 60 * 60 * 1000)) < 30 ? { background: "red" } : { background: "white" }}>
-                        <td></td>
-                        <td>{emp.name}</td>
-                        <td>{emp.brand.brandName}</td>
-                        <td>{emp.quantity}</td>
-                        <td>{emp.expiryDate}</td>
+                {this.state.medicineList.length == 0 ? <div>No Records Found</div> : (medicineList.map(med =>
+                    <tr key={med.medicineId} style={med.quantity < 10 ? { background: "yellow" } : (Math.ceil(Math.abs(med.expiryDate.getTime() - new Date().getTime()) / (24 * 60 * 60 * 1000)) < 30 ? { background: "red" } : { background: "white" }}>
+                        <td>
+                            <Link to={{
+                                pathname: `/MedicineDetail/${med.medicineId}`
+                            }}>
+                            {med.name}
+                            </Link>
+                        </td>
+                        <td>{med.brand.brandName}</td>
+                        <td>{med.quantity}</td>
+                        <td>{med.expiryDate}</td>
                         
                     </tr>
                 ))}

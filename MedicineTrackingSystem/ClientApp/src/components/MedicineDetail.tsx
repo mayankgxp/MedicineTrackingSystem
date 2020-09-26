@@ -12,7 +12,7 @@ export class MedicineDetail extends React.Component<RouteComponentProps<{}>, Fet
 
         this.state = { medicineData: new Medicine(), loading: true };
 
-        var medicineId = this.props.match.params["id"];
+        var medicineId = this.props.match.params["medicineId"];
 
 
         fetch('https://localhost:44354/medicine/GetMedicineById/' + medicineId)
