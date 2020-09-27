@@ -1,6 +1,6 @@
 # MedicineTrackingSystem
 
-We have two projects in same Same solution (Web + API)
+We have three projects in same Same solution (Web + API + API Test Project)
 
 Below are the DB scripts having two tables Medicine and Brand :
 
