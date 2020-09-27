@@ -4,12 +4,12 @@ We have two projects in same Same solution (Web + API)
 
 Below are the DB scripts having two tables Medicine and Brand :
 
-CREATE TABLE `PRD_Phynd`.`Brand` (
+CREATE TABLE `MedicineDB`.`Brand` (
   `BrandId` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `BrandName` VARCHAR(45) NOT NULL COMMENT ''
   PRIMARY KEY (`BrandId`)  COMMENT '');
   
-CREATE TABLE `PRD_Phynd`.`Medicine` (
+CREATE TABLE `MedicineDB`.`Medicine` (
   `MedicineId` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `Name` VARCHAR(45) NOT NULL COMMENT '',
   `BrandId` INT(11) NOT NULL COMMENT '',
@@ -19,7 +19,7 @@ CREATE TABLE `PRD_Phynd`.`Medicine` (
   PRIMARY KEY (`MedicineId`)  COMMENT '')
   CONSTRAINT `fk_Med_Brand`
   FOREIGN KEY (`BrandId`)
-  REFERENCES `PRD_Phynd`.`Brand` (`BrandId`)
+  REFERENCES `MedicineDB`.`Brand` (`BrandId`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
   
