@@ -12,6 +12,9 @@ namespace MedicineTrackingSystem.API.Models
         public float Price { get; set; }
         public string Notes { get; set; }
         public BrandDto Brand { get; set; }
+        public int BrandId { get; set; }
+        public int Quantity { get; set; }
+        public DateTime ExpireDate { get; set; }
     }
     public class BrandDto
     {

@@ -22,7 +22,8 @@ namespace MedicineTrackingSystem.API.DataService
                 BrandId = medicine.BrandId,
                 Name = medicine.Name,
                 Notes = medicine.Notes,
-                Price = medicine.Price
+                Price = medicine.Price,
+                Quantity = medicine.Quantity
             });
 
             await (Context as DbContext).SaveChangesAsync();

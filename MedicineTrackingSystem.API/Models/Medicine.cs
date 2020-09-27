@@ -13,6 +13,7 @@ namespace MedicineTrackingSystem.API
         [ForeignKey("Brand")]
         public int BrandId { get; set; }
         public System.DateTime ExpireDate { get; set; }
+        public int Quantity { get; set; }
         public virtual Brand Brand { get; set; }
     }
 

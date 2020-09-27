@@ -62,6 +62,12 @@ export class MedicineDetail extends React.Component<RouteComponentProps<{}>, Fet
                     </div>
                 </div >
                 < div className="form-group row" >
+                    <label className=" control-label col-md-12" htmlFor="price">Price</label>
+                    <div className="col-md-4">
+                        <span className="form-control" defaultValue={this.state.medicineData.price.toFixed(2)} />
+                    </div>
+                </div >
+                < div className="form-group row" >
                     <label className=" control-label col-md-12" htmlFor="quantity">Quantity</label>
                     <div className="col-md-4">
                         <span className="form-control" defaultValue={this.state.medicineData.quantity} />

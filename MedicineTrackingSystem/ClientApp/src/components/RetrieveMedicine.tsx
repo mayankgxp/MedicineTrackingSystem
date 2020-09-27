@@ -27,7 +27,6 @@ export class FetchMedicine extends React.Component<RouteComponentProps<{}>, Fetc
         this.setState({ medicineList: data });
     }
     public render() {
-        debugger
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
             : this.renderMedicineTable(this.state.medicineList);
@@ -50,13 +49,13 @@ export class FetchMedicine extends React.Component<RouteComponentProps<{}>, Fetc
                     <th>Medicine Name</th>
                     <th>Brand</th>
                     <th>Prrice</th>
-                    <th>Quantity</th>
+                    <th>Price</th>
                     <th>Expiry Date</th>
                 </tr>
             </thead>
             <tbody>
                 {this.state.medicineList.length == 0 ? <div>No Records Found</div> : (medicineList.map(med =>
-                    <tr key={med.medicineId} style={med.quantity < 10 ? { background: "yellow" } : (Math.ceil(Math.abs(med.expiryDate.getTime() - new Date().getTime()) / (24 * 60 * 60 * 1000)) < 30 ? { background: "red" } : { background: "white" }}>
+                    <tr key={med.medicineId} style={med.quantity < 10 ? { background: "yellow" } : (Math.ceil(Math.abs(med.expiryDate.getTime() - new Date().getTime()) / (24 * 60 * 60 * 1000)) < 30 ? { background: "red" } : { background: "white" })}>
                         <td>
                             <Link to={{
                                 pathname: `/MedicineDetail/${med.medicineId}`
@@ -65,6 +64,7 @@ export class FetchMedicine extends React.Component<RouteComponentProps<{}>, Fetc
                             </Link>
                         </td>
                         <td>{med.brand.brandName}</td>
+                        <td>{med.price.toFixed(2)}</td>
                         <td>{med.quantity}</td>
                         <td>{med.expiryDate}</td>
                         
@@ -78,6 +78,7 @@ export class Medicine {
     medicineId: number = 0;
     name: string = "";
     brand: Brand = new Brand();
+    price: number = 0;
     quantity: number = 0;
     expiryDate: Date = new Date();
     notes: string = "";

@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 import { Medicine } from './RetrieveMedicine';
-import { Popup } from '../Common/popup';
+import Popup from '../Common/popup';
 
 interface AddFetchMedicineState {
     title: string;
@@ -107,6 +107,12 @@ export class AddMedicine extends React.Component<RouteComponentProps<{}>, AddFet
                                 <option key={brand.brandId} value={brand.brandName}>{brand.brandName}</option>
                             )}
                         </select>
+                    </div>
+                </div >
+                < div className="form-group row" >
+                    <label className=" control-label col-md-12" htmlFor="price">Price</label>
+                    <div className="col-md-4">
+                        <input className="form-control" type="text" name="price" defaultValue={this.state.medicineData.price.toFixed(2)} required />
                     </div>
                 </div >
                 < div className="form-group row" >
